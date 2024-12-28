@@ -1,1 +1,2 @@
 browser-use==0.1.17
+gradio==5.9.1

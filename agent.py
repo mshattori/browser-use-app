@@ -7,7 +7,7 @@ class AgentError(Exception):
     """Custom exception for agent errors."""
     pass
 
-async def main(prompt):
+async def run(prompt):
     agent = Agent(
         task=prompt,
         llm=init_chat_model(model='gpt-4o-mini'),
@@ -23,5 +23,5 @@ async def main(prompt):
 
 if __name__ == '__main__':
     prompt = sys.argv[1]
-    output = asyncio.run(main(prompt))
+    output = asyncio.run(run(prompt))
     print(output)
